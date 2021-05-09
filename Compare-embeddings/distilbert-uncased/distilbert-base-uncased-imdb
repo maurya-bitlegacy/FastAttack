@@ -1,0 +1,155 @@
+model : distilbert-base-uncased-imdb
+
+a) Greedy search  constraint: RepaetModification , Stopword
+Fasttext:
+| Attack Results                |         |
++-------------------------------+---------+
+| Number of successful attacks: | 9       |
+| Number of failed attacks:     | 0       |
+| Number of skipped attacks:    | 0       |
+| Original accuracy:            | 100.0%  |
+| Accuracy under attack:        | 0.0%    |
+| Attack success rate:          | 100.0%  |
+| Average perturbed word %:     | 5.97%   |
+| Average num. words per input: | 228.44  |
+| Avg num queries:              | 1289.89 |
++-------------------------------+---------+
+textattack: Attack time: 159.85812830924988s
+
+
+Word2Vec:
+| Attack Results                |        |
++-------------------------------+--------+
+| Number of successful attacks: | 9      |
+| Number of failed attacks:     | 0      |
+| Number of skipped attacks:    | 0      |
+| Original accuracy:            | 100.0% |
+| Accuracy under attack:        | 0.0%   |
+| Attack success rate:          | 100.0% |
+| Average perturbed word %:     | 4.8%   |
+| Average num. words per input: | 228.44 |
+| Avg num queries:              | 753.22 |
++-------------------------------+--------+
+textattack: Attack time: 91.20895004272461s
+
+
+Glove:
+| Attack Results                |         |
++-------------------------------+---------+
+| Number of successful attacks: | 8       |
+| Number of failed attacks:     | 1       |
+| Number of skipped attacks:    | 0       |
+| Original accuracy:            | 100.0%  |
+| Accuracy under attack:        | 11.11%  |
+| Attack success rate:          | 88.89%  |
+| Average perturbed word %:     | 2.55%   |
+| Average num. words per input: | 228.44  |
+| Avg num queries:              | 1056.67 |
++-------------------------------+---------+
+textattack: Attack time: 295.74473881721497s
+
+
+B) GreedyWordSwapWIR
+from textattack.constraints.pre_transformation import RepeatModification, StopwordModification
+fasttext:
+| Attack Results                |        |
++-------------------------------+--------+
+| Number of successful attacks: | 7      |
+| Number of failed attacks:     | 2      |
+| Number of skipped attacks:    | 0      |
+| Original accuracy:            | 100.0% |
+| Accuracy under attack:        | 22.22% |
+| Attack success rate:          | 77.78% |
+| Average perturbed word %:     | 6.15%  |
+| Average num. words per input: | 228.44 |
+| Avg num queries:              | 268.78 |
++-------------------------------+--------+
+textattack: Attack time: 18.99606156349182s
+
+
+
+word2Vec:
+| Attack Results                |        |
++-------------------------------+--------+
+| Number of successful attacks: | 6      |
+| Number of failed attacks:     | 3      |
+| Number of skipped attacks:    | 0      |
+| Original accuracy:            | 100.0% |
+| Accuracy under attack:        | 33.33% |
+| Attack success rate:          | 66.67% |
+| Average perturbed word %:     | 10.51% |
+| Average num. words per input: | 228.44 |
+| Avg num queries:              | 287.11 |
++-------------------------------+--------+
+textattack: Attack time: 21.83959126472473s
+
+
+
+Glove:
+ Attack Results                |        |
++-------------------------------+--------+
+| Number of successful attacks: | 7      |
+| Number of failed attacks:     | 2      |
+| Number of skipped attacks:    | 0      |
+| Original accuracy:            | 100.0% |
+| Accuracy under attack:        | 22.22% |
+| Attack success rate:          | 77.78% |
+| Average perturbed word %:     | 5.3%   |
+| Average num. words per input: | 228.44 |
+| Avg num queries:              | 264.78 |
++-------------------------------+--------+
+textattack: Attack time: 23.201802730560303s
+
+
+
+C) ParticleSwarmOptimization
+from textattack.constraints.pre_transformation import RepeatModification, StopwordModification
+
+fasttext:
+
+| Attack Results                |         |
++-------------------------------+---------+
+| Number of successful attacks: | 7       |
+| Number of failed attacks:     | 2       |
+| Number of skipped attacks:    | 0       |
+| Original accuracy:            | 100.0%  |
+| Accuracy under attack:        | 22.22%  |
+| Attack success rate:          | 77.78%  |
+| Average perturbed word %:     | 3.41%   |
+| Average num. words per input: | 228.44  |
+| Avg num queries:              | 2730.22 |
++-------------------------------+---------+
+textattack: Attack time: 331.6634383201599s
+
+
+word2vec
+| Attack Results                |        |
++-------------------------------+--------+
+| Number of successful attacks: | 6      |
+| Number of failed attacks:     | 3      |
+| Number of skipped attacks:    | 0      |
+| Original accuracy:            | 100.0% |
+| Accuracy under attack:        | 33.33% |
+| Attack success rate:          | 66.67% |
+| Average perturbed word %:     | 3.65%  |
+| Average num. words per input: | 228.44 |
+| Avg num queries:              | 3273.0 |
++-------------------------------+--------+
+textattack: Attack time: 402.5409667491913s
+
+
+
+Glove:
+| Attack Results                |         |
++-------------------------------+---------+
+| Number of successful attacks: | 8       |
+| Number of failed attacks:     | 1       |
+| Number of skipped attacks:    | 0       |
+| Original accuracy:            | 100.0%  |
+| Accuracy under attack:        | 11.11%  |
+| Attack success rate:          | 88.89%  |
+| Average perturbed word %:     | 3.93%   |
+| Average num. words per input: | 228.44  |
+| Avg num queries:              | 2698.44 |
++-------------------------------+---------+
+textattack: Attack time: 667.512148141861s
