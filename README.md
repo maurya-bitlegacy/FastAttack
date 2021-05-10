@@ -1,5 +1,8 @@
 # FastAttack
 An adversarial attack method against text classifiers which uses FastText Embeddings for transformations.
+<a href="https://colab.research.google.com/drive/1Qe7yGcxQPg5vqDijB97yedMOonH1vyhg?usp=sharing">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 
 To run: Using Google Colab with GPU runtime is recommended. It will help you save time by not installing a ton of dependencies!
 
